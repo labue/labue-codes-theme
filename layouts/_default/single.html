@@ -1,7 +1,16 @@
 {{ define "main" }}
 
 <h1 class="hed">
-  {{- if .Parent -}}
+  {{- if ne .Parent.Kind "home" -}}
+    <a href="{{ .FirstSection.RelPermalink }}" class="hed__link">
+      <span class="hed__sec">
+        {{- .FirstSection.Title -}}
+      </span>
+    </a>
+    <span class="hed__sep">:</span>
+  {{- end -}}
+
+  {{- if ne .FirstSection .CurrentSection -}}
     <a href="{{ .Parent.RelPermalink }}" class="hed__link">
       <span class="hed__sec">
         {{- .Parent.Title -}}
@@ -9,6 +18,7 @@
     </a>
     <span class="hed__sep">:</span>
   {{- end -}}
+
   <span class="hed__title">
     {{- .Title -}}
   </span>
