@@ -1,5 +1,8 @@
 .nav {
-  font: 200 $font-md/1 $font-mono;
+  font-family: $font-mono;
+  font-size: $font-md;
+  font-weight: 200;
+  line-height: 1;
   text-transform: lowercase;
 
   &--site {

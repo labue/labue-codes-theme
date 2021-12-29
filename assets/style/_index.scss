@@ -25,7 +25,10 @@
   }
 
   h3 {
-    font: bold $font-lg/1 $font-sans;
+    font-family: $font-sans;
+    font-size: $font-lg;
+    font-weight: bold;
+    line-height: 1;
     margin-bottom: $space-md;
 
     @include media-m {

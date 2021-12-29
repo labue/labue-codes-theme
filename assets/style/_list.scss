@@ -37,8 +37,11 @@
   &__meta {
     color: $color-gray-75;
     display: flex;
-    font: 200 $font-xs/1 $font-mono;
+    font-family: $font-mono;
+    font-size: $font-xs;
+    font-weight: 200;
     justify-content: space-between;
+    line-height: 1;
   }
 
   &__more {

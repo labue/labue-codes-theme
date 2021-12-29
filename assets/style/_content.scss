@@ -36,7 +36,11 @@
   background-color: $color-gray;
   color: $color-white;
   display: flex;
-  font: 200 $font-zz/1.1 $font-heading;
+  flex-flow: row wrap;
+  font-family: $font-heading;
+  font-size: $font-lg;
+  font-weight: 200;
+  line-height: 1.1;
   margin-bottom: $space-lg;
   padding: $space-sm $space-md;
 
@@ -53,14 +57,32 @@
   }
 
   &__sep {
-    margin-right: $space-md;
+    margin-right: $space-sm;
+  }
+
+  @include media-l {
+    font-size: $font-xx;
+
+    &__sep {
+      margin-right: $space-md;
+    }
+  }
+
+  @include media-x {
+    font-size: $font-zz;
+
+    &__sep {
+      margin-right: $space-md;
+    }
   }
 }
 
 
 .dek {
   color: $color-gray-75;
-  font: normal $font-sm/1 $font-mono;
+  font-family: $font-mono;
+  font-size: $font-sm;
+  line-height: 1;
   margin: $space-sm 0 $space-md 0;
 }
 
@@ -69,7 +91,13 @@
   margin: $space-lg 0 $space-xl 0;
 
   &--section {
-    font-size: $font-lg;
+    font-size: $font-md;
+  }
+
+  @include media-l {
+    &--section {
+      font-size: $font-lg;
+    }
   }
 }
 
