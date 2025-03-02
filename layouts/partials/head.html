@@ -3,8 +3,31 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   {{ $title := print .Site.Title " | " .Title }}
-  {{ if .IsHome }}{{ $title = .Site.Title }}{{ end }}
+  {{ if .IsHome }}
+    {{ $title = .Site.Title }}
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Michael LaBue",
+        "url": "https://labue.codes",
+        "jobTitle": "Full-Stack Developer",
+        "description": "Experienced full-stack developer specializing in HTML, CSS, JavaScript, React, PHP, and Go. Expert in building scalable web applications.",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "labue.codes"
+        },
+        "sameAs": [
+          "https://github.com/labue",
+          "https://linkedin.com/in/labue",
+        ]
+      }
+      </script>
+  {{ end }}
+
   <title>{{ $title }}</title>
+  <meta name="description" content="{{ .Description }}">
 
   <link href="/css/style.css" media="screen" rel="stylesheet" type="text/css">
 </head>

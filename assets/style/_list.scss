@@ -23,6 +23,7 @@
       color: currentColor;
       display: block;
       padding-bottom: $space-xs;
+      text-decoration: none;
 
       &:hover {
         border-bottom-color: $color-active;

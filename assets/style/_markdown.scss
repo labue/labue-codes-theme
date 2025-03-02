@@ -2,59 +2,79 @@
  * markdown styling
  */
 .md {
-  a {
-    border-bottom: 2px solid currentColor;
-    text-decoration: none;
-
-    &:hover {
-      border-bottom-color: $color-active;
-    }
-  }
-
-  p {
-    margin: $space-lg 0;
-  }
+  font-family: $font-sans;
+  margin: $space-xl 0;
 
   h1, h2, h3, h4, h5, h6 {
-    margin: $space-lg 0 $space-md;
+    font-weight: bold;
     line-height: 1;
   }
 
   h1 {
-    font-size: $font-zz;
+    font-size: $font-xx;
+    margin-bottom: $space-xl;
   }
 
   h2 {
-    font-size: $font-xx;
+    font-size: $font-xl;
+    margin-bottom: $space-lg;
   }
 
   h3 {
-    font-size: $font-xl;
+    font-size: $font-lg;
+    margin-bottom: $space-md;
+
+    @include media-m {
+      font-size: $font-md;
+    }
+
+    @include media-l {
+      font-size: $font-lg;
+    }
   }
 
   h4 {
-    font-size: $font-lg;
+    font-size: $font-md;
+    margin-bottom: $space-md;
   }
 
   h5 {
-    font-size: $font-md
+    font-size: $font-sm;
+    margin-bottom: $space-md;
   }
 
   h6 {
-    font-size: $font-sm;
+    font-size: $font-xs;
+    margin-bottom: $space-md;
   }
 
-  em {
-    font-style: italic;
+  p {
+    line-height: 1.6;
+    margin: $space-lg 0;
   }
 
   strong {
     font-weight: bold;
   }
 
+  em {
+    font-style: italic;
+  }
+
+  a {
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    text-decoration-color: currentColor;
+
+    &:hover {
+      text-decoration-color: $color-active;
+    }
+  }
+
   hr {
     border: none;
     border-top: 1px solid $color-active;
+    margin: $space-lg 0;
   }
 
   blockquote {
@@ -74,6 +94,7 @@
     font-size: $font-xs;
     font-variant: normal;
     line-height: 1.5;
+    margin: $space-lg 0;
   }
 
   code {
@@ -97,6 +118,7 @@
   }
 
   table {
+    margin: $space-lg 0;
     width: 100%;
 
     thead {
@@ -133,7 +155,8 @@
   }
 
   ul {
-    margin-left: $space-xl;
+    line-height: 1.6;
+    margin: $space-lg 0 $space-lg $space-xl;
     list-style-type: disc;
 
     li {
@@ -150,7 +173,8 @@
   }
 
   ol {
-    margin-left: $space-xl;
+    line-height: 1.6;
+    margin: $space-lg 0 $space-lg $space-xl;
     list-style-type: decimal-leading-zero;
 
     ol {
